@@ -1,0 +1,7 @@
+{
+  "name": "Birthday Experience",
+  "description": "An interactive, step-by-step birthday celebration featuring a 3D card, real-time age timer, room decorations, and a microphone-enabled candle blowing experience.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

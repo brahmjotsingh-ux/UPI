@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Happy Birthday!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Utilities for 3D Transforms that Tailwind doesn't have by default */
+      .perspective-1000 { perspective: 1000px; }
+      .transform-style-3d { transform-style: preserve-3d; }
+      .backface-hidden { backface-visibility: hidden; }
+      .rotate-y-180 { transform: rotateY(180deg); }
+      .rotate-y-negative-180 { transform: rotateY(-180deg); }
+      
+      /* Animation Keyframes */
+      @keyframes floatUp {
+        0% { bottom: -120px; transform: translateX(0); }
+        100% { bottom: 110vh; transform: translateX(20px); }
+      }
+      @keyframes floatWobble {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(15px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes flicker {
+        0% { transform: scale(1); opacity: 0.9; }
+        100% { transform: scale(1.1); opacity: 1; }
+      }
+      
+      .animate-float { animation: floatUp 10s linear infinite; }
+      .animate-wobble { animation: floatWobble 3s ease-in-out infinite; }
+      .animate-flicker { animation: flicker 0.1s infinite alternate; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 overflow-hidden touch-none">
+    <div id="root"></div>
+  </body>
+</html>
